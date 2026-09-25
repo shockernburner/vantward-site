@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090b35">
-  <meta name="description" content="Vantward Solutions develops electric mobility partnerships, ultra-fast charging infrastructure, and intelligent software products including EraseAI and CookHub.">
+  <meta name="description" content="Vantward Solutions develops electric mobility partnerships, ultra-fast charging infrastructure, and intelligent software products including EraseAI, CookHub, and Rubikation: Cube Arena.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://vantward.com/">
 
@@ -264,6 +264,23 @@
     .venture-card:hover .venture-arrow { transform: rotate(45deg); background: rgba(2,200,223,.15); }
     .venture-card h3 { margin: 66px 0 12px; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; letter-spacing: -.05em; }
     .venture-card p { max-width: 540px; margin: 0; color: #c3c9df; }
+    .venture-card.linked { display: flex; flex-direction: column; justify-content: space-between; }
+    .venture-card.linked h3 { font-size: clamp(1.85rem, 3.2vw, 2.7rem); line-height: 1.05; }
+    .venture-links { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .venture-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: white;
+      font-size: .82rem;
+      font-weight: 800;
+      transition: border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .venture-links a:hover { transform: translateY(-2px); border-color: rgba(2, 200, 223, .7); background: rgba(2, 200, 223, .16); }
     .venture-card.coming { min-height: 340px; display: flex; flex-direction: column; justify-content: space-between; }
     .venture-card.coming h3 { margin-top: 66px; font-size: clamp(2rem, 4vw, 3.4rem); }
 
@@ -525,13 +542,17 @@
             </div>
           </article>
 
-          <a class="venture-card reveal" href="https://eraseai.ai" target="_blank" rel="noopener noreferrer" aria-label="Visit EraseAI">
+          <article class="venture-card linked reveal">
             <div class="venture-top"><span class="venture-label">AI Security & Privacy</span><span class="venture-arrow">↗</span></div>
             <div>
               <h3>EraseAI</h3>
-              <p>An AI firewall and machine-unlearning platform designed to detect, redact, rewrite, and block sensitive information before it reaches AI systems.</p>
+              <p>An AI firewall and machine-unlearning platform designed to detect, redact, rewrite, and block sensitive information before it reaches AI systems. The firewall extension is live on the Chrome Web Store.</p>
+              <div class="venture-links">
+                <a href="https://eraseai.ai" target="_blank" rel="noopener noreferrer">Website ↗</a>
+                <a href="https://chromewebstore.google.com/detail/eraseai-firewall/hckhbadbpkihjpooeljdocgidelcampp?hl=en" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a>
+              </div>
             </div>
-          </a>
+          </article>
 
           <a class="venture-card reveal" href="https://cookhub.live" target="_blank" rel="noopener noreferrer" aria-label="Visit CookHub">
             <div class="venture-top"><span class="venture-label">Food & Community</span><span class="venture-arrow">↗</span></div>
@@ -540,6 +561,18 @@
               <p>A zero-commission recipe and neighborhood-food platform connecting cooks, community kitchens, and people through shared food experiences.</p>
             </div>
           </a>
+
+          <article class="venture-card linked reveal">
+            <div class="venture-top"><span class="venture-label">Competitive Cubing</span><span class="venture-arrow">↗</span></div>
+            <div>
+              <h3>Rubikation:<br>Cube Arena</h3>
+              <p>A live 1v1 cube arena. Race another cuber in real time, climb worldwide and country ranks, and train from first layers through CFOP.</p>
+              <div class="venture-links">
+                <a href="https://rubikation.com" target="_blank" rel="noopener noreferrer">Web app ↗</a>
+                <a href="https://play.google.com/store/apps/details?id=com.rubikation.arena" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
+              </div>
+            </div>
+          </article>
 
           <article class="venture-card coming reveal">
             <div class="venture-top"><span class="venture-label">Vantward Labs</span><span class="venture-arrow">+</span></div>
