@@ -281,6 +281,11 @@
       transition: border-color .2s ease, background .2s ease, transform .2s ease;
     }
     .venture-links a:hover { transform: translateY(-2px); border-color: rgba(2, 200, 223, .7); background: rgba(2, 200, 223, .16); }
+    .venture-links a.primary { border-color: rgba(2, 200, 223, .7); background: rgba(2, 200, 223, .22); }
+    .venture-links .soon { display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border: 1px dashed rgba(255,255,255,.28); border-radius: 999px; color: #b7bedc; font-size: .82rem; font-weight: 800; }
+    .venture-features { position: relative; z-index: 1; margin: 18px 0 0; padding: 0; list-style: none; }
+    .venture-features li { margin-top: 7px; color: #c3c9df; font-size: .88rem; }
+    .venture-features li::before { content: "↗"; color: var(--cyan); margin-right: 9px; font-weight: 900; }
     .venture-card.coming { min-height: 340px; display: flex; flex-direction: column; justify-content: space-between; }
     .venture-card.coming h3 { margin-top: 66px; font-size: clamp(2rem, 4vw, 3.4rem); }
 
@@ -516,7 +521,7 @@
             <h3>Products for an AI-native economy</h3>
             <p>We create software that addresses emerging needs in AI privacy, data control, community commerce, and scalable digital participation.</p>
             <ul class="mini-list">
-              <li>AI firewall and machine unlearning</li>
+              <li>AI firewall and data-leak prevention</li>
               <li>Trust-centered product design</li>
               <li>Global digital platforms</li>
             </ul>
@@ -545,11 +550,18 @@
           <article class="venture-card linked reveal">
             <div class="venture-top"><span class="venture-label">AI Security & Privacy</span><span class="venture-arrow">↗</span></div>
             <div>
-              <h3>EraseAI</h3>
-              <p>An AI firewall and machine-unlearning platform designed to detect, redact, rewrite, and block sensitive information before it reaches AI systems. The firewall extension is live on the Chrome Web Store.</p>
+              <h3>EraseAI Firewall</h3>
+              <p>An AI firewall that stops API keys, passwords, card numbers, and personal data before they reach ChatGPT, Claude, Gemini, or Replit. Every message is checked the moment you press Send, and you decide what happens next. Free on the Chrome Web Store, with a web app at eraseai.ai and an Android app coming soon.</p>
+              <ul class="venture-features">
+                <li>Secret and PII detection in prompts and attached files</li>
+                <li>Sanitize &amp; Send, Send Anyway, or Cancel</li>
+                <li>On-device image text scanning; free tier needs no account</li>
+                <li>Scan history, API keys, and team plans in the web app</li>
+              </ul>
               <div class="venture-links">
-                <a href="https://eraseai.ai" target="_blank" rel="noopener noreferrer">Website ↗</a>
-                <a href="https://chromewebstore.google.com/detail/eraseai-firewall/hckhbadbpkihjpooeljdocgidelcampp?hl=en" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a>
+                <a class="primary" href="https://chromewebstore.google.com/detail/eraseai-firewall/hckhbadbpkihjpooeljdocgidelcampp?hl=en" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a>
+                <a href="https://eraseai.ai" target="_blank" rel="noopener noreferrer">Web app ↗</a>
+                <span class="soon">Android · Coming soon</span>
               </div>
             </div>
           </article>
