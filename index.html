@@ -4,20 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0a0c45">
-  <meta name="description" content="Vantward Solutions builds software for a calmer day: Rubikation (live 1v1 cube arena), CookHub (zero-commission home cooking), EraseAI Firewall (stops secrets reaching AI chats) and TETHER: Primal, a co-op dinosaur survival game, coming soon.">
-  <meta name="robots" content="index,follow">
+  <title>Vantward Solutions | Software Studio in Singapore</title>
+  <meta name="description" content="Vantward Solutions is a Singapore software studio making EraseAI Firewall, Rubikation, CookHub and TETHER: Primal, a co-op dinosaur survival game.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://vantward.com/">
 
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vantward Solutions">
+  <meta property="og:locale" content="en_SG">
   <meta property="og:url" content="https://vantward.com/">
-  <meta property="og:title" content="Vantward Solutions — Software for a calmer day">
-  <meta property="og:description" content="Follow Vee the robot through one day with Rubikation, CookHub, EraseAI Firewall and TETHER: Primal.">
-  <meta property="og:image" content="https://vantward.com/assets/icon-512.png">
+  <meta property="og:title" content="Vantward Solutions | Software for a calmer day">
+  <meta property="og:description" content="Follow Vee the robot through one day with Rubikation, CookHub, EraseAI Firewall and TETHER: Primal, made in Singapore.">
+  <meta property="og:image" content="https://vantward.com/assets/og/home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Vee the robot in a room at dawn, with the Vantward Solutions intro card">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vantward Solutions | Software for a calmer day">
+  <meta name="twitter:description" content="EraseAI Firewall, Rubikation, CookHub and TETHER: Primal, from a software studio in Singapore.">
+  <meta name="twitter:image" content="https://vantward.com/assets/og/home.jpg">
 
-  <title>Vantward Solutions | Software for a calmer day</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -62,7 +71,7 @@
     .hdr > * { pointer-events: auto; }
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; padding: 5px 14px 5px 5px; border-radius: 999px; background: rgba(7,10,42,.55); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
     .brand-mark { width: 38px; height: 38px; border-radius: 50%; overflow: hidden; background: #fff; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
-    .brand-mark img { width: 170%; height: 170%; object-fit: cover; object-position: 50% 52%; }
+    .brand-mark img { width: 82%; height: 82%; object-fit: contain; }
     .brand-name { font-family: var(--display); font-weight: 800; font-size: 1.02rem; letter-spacing: -.01em; line-height: 1; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
     .brand-name small { display: block; font-family: "Inter", sans-serif; font-weight: 600; font-size: .62rem; letter-spacing: .28em; opacity: .75; margin-top: 4px; }
     .hdr nav { display: flex; align-items: center; gap: 4px; padding: 5px; border-radius: 999px; background: rgba(7,10,42,.55); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
@@ -85,7 +94,13 @@
     .card { --acc: var(--cyan); position: relative; }
     .card .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--acc); }
     .card .eyebrow::before { content: ""; width: 22px; height: 2px; border-radius: 2px; background: currentColor; }
-    .card h1 { font-size: clamp(2rem, 3.6vw, 3.4rem); margin-top: 12px; }
+    .card h1 { font-size: clamp(2rem, 3.6vw, 3.4rem); }
+    .card h1 .eyebrow { display: flex; font-family: "Inter", sans-serif; letter-spacing: .16em; line-height: 1.4; margin-bottom: 12px; }
+    .more { display: inline-block; margin-top: 12px; font-size: .8rem; font-weight: 700; color: var(--acc); text-decoration: none; border-bottom: 1px solid transparent; }
+    .more:hover { border-bottom-color: currentColor; }
+    .explore { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 12px; font-size: .78rem; }
+    .explore a { color: var(--muted); text-decoration: none; font-weight: 600; }
+    .explore a:hover { color: #fff; }
     .card h2 { font-size: clamp(1.7rem, 2.8vw, 2.6rem); margin-top: 12px; }
     .card h1 em, .card h2 em { font-style: normal; color: var(--acc); }
     .card p { color: var(--muted); margin: 12px 0 0; font-size: .97rem; }
@@ -441,30 +456,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Vantward Solutions",
-    "legalName": "Vantward Solutions Pte. Ltd.",
-    "url": "https://vantward.com/",
-    "logo": "https://vantward.com/assets/icon-512.png",
-    "email": "director@vantward.com",
-    "telephone": "+6582430739",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "68 Circular Road #02-01",
-      "addressLocality": "Singapore",
-      "postalCode": "049422",
-      "addressCountry": "SG"
-    },
-    "sameAs": [
-      "https://medium.com/@firdous.mahmood26/the-three-layers-between-a-citizen-and-an-ai-model-4712f1ceb952",
-      "https://www.linkedin.com/posts/vantward-solutions-pte-ltd_aidatagovernance-aifirewall-promptsecurity-activity-7453375075518611456-Zfh5"
-    ],
-    "description": "Software studio in Singapore building Rubikation, CookHub, EraseAI Firewall and TETHER: Primal.",
-    "owns": [
-      { "@type": "SoftwareApplication", "name": "EraseAI Firewall", "applicationCategory": "SecurityApplication", "url": "https://eraseai.ai" },
-      { "@type": "SoftwareApplication", "name": "Rubikation: Cube Arena", "applicationCategory": "GameApplication", "url": "https://rubikation.com" },
-      { "@type": "WebApplication", "name": "CookHub", "url": "https://cookhub.live" },
-      { "@type": "VideoGame", "name": "TETHER: Primal", "gamePlatform": "PC" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://vantward.com/#org",
+        "name": "Vantward Solutions",
+        "legalName": "Vantward Solutions Pte. Ltd.",
+        "alternateName": ["Vantward", "Vantward Games"],
+        "url": "https://vantward.com/",
+        "logo": { "@type": "ImageObject", "url": "https://vantward.com/assets/icon-512.png", "width": 512, "height": 512 },
+        "image": "https://vantward.com/assets/og/home.jpg",
+        "description": "Software studio in Singapore building EraseAI Firewall, Rubikation, CookHub and TETHER: Primal.",
+        "email": "director@vantward.com",
+        "telephone": "+65 8243 0739",
+        "address": { "@type": "PostalAddress", "streetAddress": "68 Circular Road #02-01", "addressLocality": "Singapore", "postalCode": "049422", "addressCountry": "SG" },
+        "founder": { "@type": "Person", "@id": "https://vantward.com/#founder", "name": "Firdous Mahmood", "jobTitle": "Founder", "sameAs": ["https://medium.com/@firdous.mahmood26", "https://www.linkedin.com/in/firdous-mahmood-270a89148"] },
+        "contactPoint": [{ "@type": "ContactPoint", "contactType": "sales", "email": "director@vantward.com", "telephone": "+65 8243 0739", "areaServed": "Worldwide", "availableLanguage": ["English"] }],
+        "sameAs": ["https://eraseai.ai", "https://rubikation.com", "https://cookhub.live"],
+        "brand": [
+          { "@type": "Brand", "name": "EraseAI Firewall", "url": "https://vantward.com/eraseai-firewall/" },
+          { "@type": "Brand", "name": "Rubikation", "url": "https://vantward.com/rubikation/" },
+          { "@type": "Brand", "name": "CookHub", "url": "https://vantward.com/cookhub/" },
+          { "@type": "Brand", "name": "TETHER: Primal", "url": "https://vantward.com/tether-primal/" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vantward.com/#website",
+        "url": "https://vantward.com/",
+        "name": "Vantward Solutions",
+        "publisher": { "@id": "https://vantward.com/#org" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://vantward.com/#home",
+        "url": "https://vantward.com/",
+        "name": "Vantward Solutions | Software Studio in Singapore",
+        "isPartOf": { "@id": "https://vantward.com/#website" },
+        "about": { "@id": "https://vantward.com/#org" },
+        "primaryImageOfPage": "https://vantward.com/assets/og/home.jpg"
+      }
     ]
   }
   </script>
@@ -473,7 +505,7 @@
 <body>
   <header class="hdr">
     <a class="brand" href="#top" data-go="0" aria-label="Vantward Solutions, back to the start">
-      <span class="brand-mark"><img src="assets/vantward-logo.png" alt=""></span>
+      <span class="brand-mark"><img src="assets/logo-mark-96.png" alt="" width="38" height="38"></span>
       <span class="brand-name">Vantward<small>SOLUTIONS</small></span>
     </a>
     <nav aria-label="Primary">
@@ -636,7 +668,7 @@
           <div class="prop p-book" data-prop="4">
             <div class="book"><svg viewBox="0 0 100 60"><path d="M50 12 C35 2 15 2 2 8 L2 58 C15 52 35 52 50 60 Z" fill="#fbf8f1"/><path d="M50 12 C65 2 85 2 98 8 L98 58 C85 52 65 52 50 60 Z" fill="#efe9dc"/><path d="M50 12 V60" stroke="#c9c0ad" stroke-width="1.5"/><g stroke="#b8b2c9" stroke-width="2" stroke-linecap="round"><path d="M12 18 H40 M12 26 H40 M12 34 H34 M60 18 H88 M60 26 H88 M60 34 H80"/></g></svg></div>
             <div class="page a" id="pg1"><b>LinkedIn</b><span>Your team is already pasting secrets into AI chats.</span></div>
-            <div class="page b" id="pg2"><b>LinkedIn</b><span>The AI firewall should be independent of the model.</span></div>
+            <div class="page b" id="pg2"><b>LinkedIn</b><span>The missing layer in AI: a firewall the user owns.</span></div>
             <div class="page c" id="pg3"><b>Medium</b><span>The three layers between a citizen and an AI model.</span></div>
           </div>
         </div>
@@ -648,8 +680,7 @@
       <!-- The story. Without script these read as a normal page. -->
       <main class="cards" id="top">
         <article class="card" id="intro" data-label="Intro" data-time="06:30 · Dawn" style="--acc:#02c8df">
-          <span class="eyebrow">Vantward Solutions · Singapore</span>
-          <h1>The world is loud.<br><em>We build the calm parts.</em></h1>
+          <h1><span class="eyebrow">Vantward Solutions · Singapore software studio</span>The world is loud.<br><em>We build the calm parts.</em></h1>
           <p>Wars on every screen. Prices up again. Another breach in the news. Meet Vee, our small robot. Scroll through one day in Vee's room and the software we make for it.</p>
           <div class="btns">
             <a class="btn primary" href="#rubikation" data-go="1">Begin the day ↓</a>
@@ -667,6 +698,7 @@
             <a class="btn primary" href="https://rubikation.com" target="_blank" rel="noopener noreferrer">Play on the web ↗</a>
             <a class="btn" href="https://play.google.com/store/apps/details?id=com.rubikation.arena" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
           </div>
+          <a class="more" href="/rubikation/">More about Rubikation →</a>
         </article>
 
         <article class="card" id="cookhub" data-label="CookHub" data-time="12:40 · Lunch" style="--acc:#ff6a1f">
@@ -677,6 +709,7 @@
           <div class="btns">
             <a class="btn primary" href="https://cookhub.live" target="_blank" rel="noopener noreferrer">Find a home kitchen ↗</a>
           </div>
+          <a class="more" href="/cookhub/">More about CookHub →</a>
         </article>
 
         <article class="card" id="eraseai" data-label="EraseAI" data-time="15:10 · Work" style="--acc:#22d3ee">
@@ -689,6 +722,7 @@
             <a class="btn" href="https://eraseai.ai" target="_blank" rel="noopener noreferrer">Web app ↗</a>
             <span class="btn soon">Android · Coming soon</span>
           </div>
+          <a class="more" href="/eraseai-firewall/">How EraseAI Firewall works →</a>
         </article>
 
         <article class="card" id="insights" data-label="Reading" data-time="19:30 · Evening" style="--acc:#a5b4fc">
@@ -697,9 +731,10 @@
           <p>The lamp comes on. Vee reads our founder's notes on AI security, data leaks and why the safeguard should sit outside the model.</p>
           <div class="reads">
             <a class="read" href="https://lnkd.in/p/gcBD_wBn" target="_blank" rel="noopener noreferrer"><b>LinkedIn</b><span>Your team is already pasting secrets into AI chats. Here's the seatbelt we built.</span><i>↗</i></a>
-            <a class="read" href="https://www.linkedin.com/posts/vantward-solutions-pte-ltd_aidatagovernance-aifirewall-promptsecurity-activity-7453375075518611456-Zfh5?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAACPBPjQBnu5qVP1JJUKMJ6x4QnHc3hAkSX0" target="_blank" rel="noopener noreferrer"><b>LinkedIn</b><span>The AI firewall should be independent of the model it protects.</span><i>↗</i></a>
+            <a class="read" href="https://www.linkedin.com/posts/vantward-solutions-pte-ltd_aidatagovernance-aifirewall-promptsecurity-activity-7453375075518611456-Zfh5?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAACPBPjQBnu5qVP1JJUKMJ6x4QnHc3hAkSX0" target="_blank" rel="noopener noreferrer"><b>LinkedIn</b><span>The Missing Layer in AI: A Firewall the User Owns</span><i>↗</i></a>
             <a class="read" href="https://medium.com/@firdous.mahmood26/the-three-layers-between-a-citizen-and-an-ai-model-4712f1ceb952" target="_blank" rel="noopener noreferrer"><b>Medium</b><span>The Three Layers Between a Citizen and an AI Model</span><i>↗</i></a>
           </div>
+          <a class="more" href="/insights/">All insights →</a>
         </article>
 
         <article class="card" id="tether" data-label="TETHER" data-time="21:45 · Late" style="--acc:#8fdc5a">
@@ -712,6 +747,7 @@
             <span class="btn soon">PC · Steam · Coming soon</span>
             <a class="btn" href="mailto:director@vantward.com?subject=TETHER%3A%20Primal%20launch%20news">Get launch news</a>
           </div>
+          <a class="more" href="/tether-primal/">More about TETHER: Primal →</a>
         </article>
 
         <article class="card" id="contact" data-label="Contact" data-time="23:10 · Night" style="--acc:#02c8df">
@@ -724,6 +760,7 @@
             <a class="btn" href="https://www.linkedin.com/posts/vantward-solutions-pte-ltd_aidatagovernance-aifirewall-promptsecurity-activity-7453375075518611456-Zfh5?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAACPBPjQBnu5qVP1JJUKMJ6x4QnHc3hAkSX0" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
           <p class="addr">Vantward Solutions Pte. Ltd. · 68 Circular Road #02-01, Singapore 049422<br>© <span id="year">2026</span> Vantward Solutions</p>
+          <nav class="explore" aria-label="Explore"><a href="/about/">About Vantward</a><a href="/eraseai-firewall/">EraseAI Firewall</a><a href="/rubikation/">Rubikation</a><a href="/cookhub/">CookHub</a><a href="/tether-primal/">TETHER: Primal</a><a href="/insights/">Insights</a></nav>
           <div class="duns"><script language="JavaScript" src="https://dunsregistered.dnb.com/" type="text/javascript"></script></div>
         </article>
       </main>
