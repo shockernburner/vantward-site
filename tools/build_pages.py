@@ -589,7 +589,7 @@ PAGES.append({
       <div class="btns">
         <a class="btn primary" href="mailto:director@vantward.com?subject=Hello%20Vantward">director@vantward.com</a>
         <a class="btn" href="https://wa.me/6582430739" rel="noopener">WhatsApp +65 8243 0739</a>
-        <a class="btn" href="""" + LI_COMPANY_POST + """" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://www.linkedin.com/company/vantward-solutions-pte-ltd" rel="noopener">LinkedIn</a>
       </div>""", anchor="contact"),
     "schema": [{
         "@type": "AboutPage",
