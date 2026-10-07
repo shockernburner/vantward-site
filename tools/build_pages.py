@@ -581,7 +581,7 @@ PAGES.append({
         ('<a href="/cookhub/">CookHub</a>', "A zero-commission marketplace for home cooking in your neighbourhood."),
         ('<a href="/tether-primal/">TETHER: Primal</a>', "A co-op dinosaur survival game from Vantward Games, coming soon to PC."),
     ])) + section("Company", """      <div class="grid">
-        <div class="tile"><h3>Legal name</h3><p>Vantward Solutions Pte. Ltd.</p></div>
+        <div class="tile"><h3>Legal name</h3><p>Vantward Solutions Pte. Ltd.<br>Registration No. 202606980C</p></div>
         <div class="tile"><h3>Based in</h3><p>68 Circular Road #02-01, Singapore 049422</p></div>
         <div class="tile"><h3>Founder</h3><p>Firdous Mahmood, founder. Writes on AI security and data leaks in <a href="/insights/">Insights</a>.</p></div>
         <div class="tile"><h3>Labels</h3><p>Vantward Solutions for software, Vantward Games for games.</p></div>
