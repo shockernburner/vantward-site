@@ -4,6 +4,7 @@ plus sitemap.xml, from the data below. The homepage (index.html) is
 hand-written and not touched.
 
 Run from the repository root:  python3 tools/build_pages.py
+After the change is live, tell search engines:  python3 tools/build_pages.py --indexnow
 """
 import html
 import json
@@ -616,5 +617,24 @@ def main():
     print("wrote sitemap.xml")
 
 
+INDEXNOW_KEY = "5bea7fa8e979cc425cba68f9329a0a2e"  # served from /5bea7fa8e979cc425cba68f9329a0a2e.txt
+
+
+def ping_indexnow():
+    """Tell IndexNow search engines (Bing, Yandex, Seznam, Naver) that every page changed."""
+    import urllib.request
+    urls = [f"{SITE}/"] + [f"{SITE}{p['path']}" for p in PAGES]
+    body = json.dumps({"host": "vantward.com", "key": INDEXNOW_KEY,
+                       "keyLocation": f"{SITE}/{INDEXNOW_KEY}.txt", "urlList": urls}).encode()
+    req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                 headers={"Content-Type": "application/json; charset=utf-8"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        print("IndexNow:", r.status, len(urls), "URLs")
+
+
 if __name__ == "__main__":
+    import sys
+    if "--indexnow" in sys.argv:
+        ping_indexnow()
+        sys.exit()
     main()
