@@ -21,6 +21,7 @@ LI_COMPANY_POST = ("https://www.linkedin.com/posts/vantward-solutions-pte-ltd_ai
 LI_FOUNDER_POST = "https://lnkd.in/p/gcBD_wBn"
 PLAY_ERASEAI = "https://play.google.com/store/apps/details?id=com.eraseai.firewall"
 ITCH_HUSHCLAW = "https://firdousmahmood.itch.io/hushclaw"
+SITE_HUSHCLAW = "https://hushclaw.games/"
 MEDIUM_POST = "https://medium.com/@firdous.mahmood26/the-three-layers-between-a-citizen-and-an-ai-model-4712f1ceb952"
 
 ORG_REF = {"@id": f"{SITE}/#org"}
@@ -495,6 +496,7 @@ PAGES.append({
             "game: drop onto a new island every match, recover what was left at dead outposts, and get everyone to "
             "the helicopter.",
     "ctas": [f'<a class="btn primary" href="{ITCH_HUSHCLAW}" rel="noopener">Play on itch.io</a>',
+             f'<a class="btn" href="{SITE_HUSHCLAW}" rel="noopener">Visit hushclaw.games</a>',
              '<span class="btn soon">Windows · macOS · Name your own price</span>'],
     "body": section("How a match works", steps([
         "<b>Drop in.</b> Every match is a new procedurally generated island of jungle, plains, swamps, rivers and ruins.",
@@ -519,7 +521,7 @@ PAGES.append({
         <div class="tile"><h3>A match</h3><p>About half an hour</p></div>
         <div class="tile"><h3>Controls</h3><p>Keyboard and mouse, rebindable</p></div>
       </div>
-      <p class="note" style="margin-top:16px">Hushclaw was first announced as TETHER: Primal.</p>"""),
+      <p class="note" style="margin-top:16px">Hushclaw was first announced as TETHER: Primal. Read the <a href="https://hushclaw.games/privacy.html">Hushclaw privacy policy</a>.</p>"""),
     "faq": hush_faq,
     "schema": [{
         "@type": "VideoGame",
@@ -527,7 +529,7 @@ PAGES.append({
         "name": "Hushclaw",
         "alternateName": "TETHER: Primal",
         "url": f"{SITE}/hushclaw/",
-        "sameAs": [ITCH_HUSHCLAW],
+        "sameAs": [SITE_HUSHCLAW, ITCH_HUSHCLAW],
         "description": "First-person co-op dinosaur survival game for one to four players on a procedurally "
                        "generated island, with stealth, proximity voice chat and extraction by helicopter.",
         "genre": ["Survival", "Co-op", "Stealth", "Horror"],
