@@ -12,13 +12,15 @@ from pathlib import Path
 
 SITE = "https://vantward.com"
 ROOT = Path(__file__).resolve().parent.parent
-UPDATED = "2026-10-07"
+UPDATED = "2026-10-19"
 
 CHROME_URL = "https://chromewebstore.google.com/detail/eraseai-firewall/hckhbadbpkihjpooeljdocgidelcampp"
 PLAY_RUBIKATION = "https://play.google.com/store/apps/details?id=com.rubikation.arena"
 LI_COMPANY_POST = ("https://www.linkedin.com/posts/vantward-solutions-pte-ltd_aidatagovernance-aifirewall-"
                    "promptsecurity-activity-7453375075518611456-Zfh5")
 LI_FOUNDER_POST = "https://lnkd.in/p/gcBD_wBn"
+PLAY_ERASEAI = "https://play.google.com/store/apps/details?id=com.eraseai.firewall"
+ITCH_HUSHCLAW = "https://firdousmahmood.itch.io/hushclaw"
 MEDIUM_POST = "https://medium.com/@firdous.mahmood26/the-three-layers-between-a-citizen-and-an-ai-model-4712f1ceb952"
 
 ORG_REF = {"@id": f"{SITE}/#org"}
@@ -27,7 +29,7 @@ NAV = [
     ("/eraseai-firewall/", "EraseAI Firewall"),
     ("/rubikation/", "Rubikation"),
     ("/cookhub/", "CookHub"),
-    ("/tether-primal/", "TETHER: Primal"),
+    ("/hushclaw/", "Hushclaw"),
     ("/insights/", "Insights"),
     ("/about/", "About"),
 ]
@@ -36,7 +38,7 @@ PRODUCTS = [
     ("/eraseai-firewall/", "EraseAI Firewall", "Stops secrets and personal data reaching AI chats.", "#22d3ee"),
     ("/rubikation/", "Rubikation", "Live 1v1 cube arena with world and country ranks.", "#e8b23f"),
     ("/cookhub/", "CookHub", "Zero-commission home cooking from your neighbourhood.", "#ff6a1f"),
-    ("/tether-primal/", "TETHER: Primal", "Co-op dinosaur survival. Coming soon to PC.", "#8fdc5a"),
+    ("/hushclaw/", "Hushclaw", "Co-op dinosaur survival. Alpha out now for PC and Mac.", "#8fdc5a"),
 ]
 
 
@@ -253,8 +255,8 @@ eraseai_faq = [
      "Yes. Attached files are checked too, and text inside images is read on your device, so the image itself is "
      "never uploaded."),
     ("Is there an Android app?",
-     "The EraseAI Android app is coming soon. Today you can use the Chrome extension and the web app at "
-     '<a href="https://eraseai.ai">eraseai.ai</a>.'),
+     f'Yes. Get EraseAI Firewall for Android on <a href="{PLAY_ERASEAI}">Google Play</a>. It also runs as a '
+     'Chrome extension and as a web app at <a href="https://eraseai.ai">eraseai.ai</a>.'),
     ("Who makes EraseAI Firewall?",
      'Vantward Solutions Pte. Ltd., a software studio in Singapore. <a href="/about/">About us</a>.'),
 ]
@@ -263,12 +265,12 @@ PAGES.append({
     "slug": "eraseai-firewall",
     "crumb": "EraseAI Firewall",
     "title": "EraseAI Firewall: Stop Secrets Reaching ChatGPT and Claude",
-    "desc": "Free Chrome extension that checks prompts and attached files before they reach ChatGPT, Claude, Gemini "
-            "or Replit, and redacts API keys, passwords, card numbers and personal data. Made by Vantward Solutions.",
+    "desc": "Free Chrome extension and Android app that checks prompts and files before they reach ChatGPT, Claude, "
+            "Gemini or Replit, and redacts API keys, passwords, card numbers and personal data.",
     "acc": "#22d3ee",
     "og": "eraseai.jpg",
     "alt": "EraseAI Firewall stopping a message with a password and an API key before it is sent to an AI chat",
-    "eyebrow": "AI security · Chrome extension",
+    "eyebrow": "AI security · Chrome, Android and web",
     "h1": "EraseAI Firewall: an AI firewall in your browser",
     "lead": "EraseAI Firewall checks what you are about to send to an AI chat and stops secrets and personal data "
             "before they leave your browser. When it finds something sensitive, you decide whether to redact it, "
@@ -276,7 +278,7 @@ PAGES.append({
     "ctas": [
         f'<a class="btn primary" href="{CHROME_URL}?utm_source=site&amp;utm_medium=web&amp;utm_campaign=vantward" rel="noopener">Add to Chrome, free</a>',
         '<a class="btn" href="https://eraseai.ai" rel="noopener">Open the web app</a>',
-        '<span class="btn soon">Android · Coming soon</span>',
+        f'<a class="btn" href="{PLAY_ERASEAI}&amp;hl=en" rel="noopener">Get it on Google Play</a>',
     ],
     "body": section("Why an AI firewall", prose(
         "Pasting a log, a config file or a customer email into an AI chat is an easy way to leak a credential or "
@@ -315,7 +317,8 @@ PAGES.append({
         "alternateName": "EraseAI",
         "applicationCategory": "SecurityApplication",
         "applicationSubCategory": "AI data loss prevention",
-        "operatingSystem": "Chrome, Web",
+        "operatingSystem": "Chrome, Android, Web",
+        "sameAs": [CHROME_URL, PLAY_ERASEAI],
         "url": "https://eraseai.ai",
         "downloadUrl": CHROME_URL,
         "installUrl": CHROME_URL,
@@ -458,66 +461,87 @@ PAGES.append({
     }],
 })
 
-# TETHER: Primal ------------------------------------------------------------
-tether_faq = [
-    ("When does TETHER: Primal come out?",
-     "It is in development and has no release date yet. It is planned for PC on Steam. "
-     '<a href="mailto:director@vantward.com?subject=TETHER%3A%20Primal%20launch%20news">Email us</a> to hear when it launches.'),
+# Hushclaw (formerly announced as TETHER: Primal) ---------------------------
+hush_faq = [
+    ("Can I play Hushclaw now?",
+     f'Yes. The alpha (version 0.3.0) is on <a href="{ITCH_HUSHCLAW}">itch.io</a> for Windows and macOS, '
+     "and you name your own price."),
     ("How many people can play together?",
-     "Teams of one to four players."),
-    ("Is every match different?",
-     "Yes. Each match drops you onto a new island generated from a seed, with jungle, plains, swamp and volcanic "
-     "areas, rivers, loot caches, ruins and extraction zones."),
+     "Play solo, or co-op with up to four players using a join code. Teammates hear each other through proximity "
+     "voice chat."),
+    ("Can I play solo?",
+     "Yes. Solo has Easy, Medium and Hard difficulty. Co-op always plays on Hard."),
     ("Is it pay-to-win?",
-     "No. Weapons, tools and threats are bought with currency earned inside the match. Real money is only for the "
-     "game itself, cosmetics and map content."),
-    ("Who is making it?",
-     'Vantward Games, the games label of Vantward Solutions Pte. Ltd. in Singapore.'),
+     "No. Everything you buy during a match is paid for with coins earned in that match, and nothing is sold for power."),
+    ("Is Hushclaw the game that was called TETHER: Primal?",
+     "Yes. Hushclaw is the new name of the co-op dinosaur survival game we first announced as TETHER: Primal."),
+    ("Who makes Hushclaw?",
+     'Vantward Games, the games label of <a href="/about/">Vantward Solutions</a> in Singapore.'),
 ]
 PAGES.append({
-    "path": "/tether-primal/",
-    "slug": "tether-primal",
-    "crumb": "TETHER: Primal",
-    "title": "TETHER: Primal | Co-op Dinosaur Survival Game for PC (Coming Soon)",
-    "desc": "Teams of one to four drop onto a new dinosaur island every match, scavenge, build defences and reach "
-            "extraction in 20 to 30 minutes. Proximity voice the dinosaurs can hear. Coming soon to PC on Steam.",
+    "path": "/hushclaw/",
+    "slug": "hushclaw",
+    "crumb": "Hushclaw",
+    "title": "Hushclaw: Co-op Dinosaur Survival Game for PC and Mac",
+    "desc": "In some parallel universe, the dinosaurs never died out. Solo or co-op for up to four: recover black "
+            "boxes on a new island every match and reach the helicopter. Alpha on itch.io.",
     "acc": "#8fdc5a",
-    "og": "tether-primal.jpg",
-    "alt": "TETHER: Primal teaser: a dinosaur crossing a volcanic island while a team of four stays tethered together",
-    "eyebrow": "Coming soon · Vantward Games",
-    "h1": "TETHER: Primal",
-    "tag": "Survive together. Quietly.",
-    "lead": "A co-op dinosaur survival game. Teams of one to four drop onto a prehistoric island that is generated "
-            "fresh for every match. Scavenge, put up quick defences, survive escalating threats, and reach the "
-            "extraction point in 20 to 30 minutes.",
-    "ctas": ['<span class="btn soon">PC · Steam · Coming soon</span>',
-             '<a class="btn primary" href="mailto:director@vantward.com?subject=TETHER%3A%20Primal%20launch%20news">Get launch news</a>'],
-    "body": section("The island", tiles([
-        ("A new island every match", "Built from a seed: jungle, plains, swamp and volcanic ground, rivers, ruins and loot."),
-        ("The threat director", "Stampedes, raptor packs, an apex predator and storms, bought and triggered against you."),
-        ("Voices carry", "Proximity voice: whisper and only close dinosaurs hear you, shout and they come from far away."),
-        ("Earn, then spend", "In-match currency from looting and objectives buys weapons, tools and bigger packs."),
-    ])) + section("Stay tethered", prose(
-        "Hunters walk over to investigate a noise; skittish animals flee from it. Rain and storms shorten how far your "
-        "voice travels. The team that talks less, and moves together, gets out.",
-        "Co-op with friends runs over Steam, with invites from the game and no ports to open. The game is in "
-        "development at Vantward Games in Singapore.")),
-    "faq": tether_faq,
+    "og": "hushclaw.jpg",
+    "alt": "Hushclaw teaser: a dinosaur crossing a volcanic island while a team of four stays close together",
+    "eyebrow": "Game · Alpha out now",
+    "h1": "Hushclaw",
+    "tag": "Stay quiet. Stay close. Leave no one.",
+    "lead": "In some parallel universe, the dinosaurs never died out. Hushclaw is a first-person co-op survival "
+            "game: drop onto a new island every match, recover what was left at dead outposts, and get everyone to "
+            "the helicopter.",
+    "ctas": [f'<a class="btn primary" href="{ITCH_HUSHCLAW}" rel="noopener">Play on itch.io</a>',
+             '<span class="btn soon">Windows · macOS · Name your own price</span>'],
+    "body": section("How a match works", steps([
+        "<b>Drop in.</b> Every match is a new procedurally generated island of jungle, plains, swamps, rivers and ruins.",
+        "<b>Recover.</b> Search dead outposts. Black boxes beep, and the beeping draws dinosaurs to you.",
+        "<b>Deliver.</b> Bring what you found to the landing pad and fire a flare.",
+        "<b>Hold.</b> Survive 45 seconds until the helicopter arrives. Teammates who go down can be revived.",
+    ])) + section("The island", tiles([
+        ("Dinosaurs that listen", "They hear you, track your scent, growl before they charge, pounce, swing their tails and knock you down."),
+        ("Night and weather", "Night matches with night vision goggles, plus storms, fog and rain."),
+        ("The Field Archive", "Recovered items are sealed files that hold a contract, a story page, a perk or an outfit."),
+        ("Tools to stay alive", "Heal, throw a noise lure, light a hand flare, and shop between fights."),
+    ])) + section("Play together", tiles([
+        ("Co-op for up to four", "Join with a code and talk through proximity voice chat."),
+        ("Daily Island and Weekly Contract", "Shared by every player, with a daily streak."),
+        ("Leaderboards", "Worldwide boards for survivors and for teams, with custom team emblems."),
+        ("Fair by design", "In-match purchases use in-match coins only. Nothing is sold for power."),
+    ])) + section("Details", """      <div class="grid">
+        <div class="tile"><h3>Platforms</h3><p>Windows and macOS</p></div>
+        <div class="tile"><h3>Players</h3><p>Solo, or co-op for 1 to 4</p></div>
+        <div class="tile"><h3>Status</h3><p>Alpha, version 0.3.0</p></div>
+        <div class="tile"><h3>Price</h3><p>Name your own price on itch.io</p></div>
+        <div class="tile"><h3>A match</h3><p>About half an hour</p></div>
+        <div class="tile"><h3>Controls</h3><p>Keyboard and mouse, rebindable</p></div>
+      </div>
+      <p class="note" style="margin-top:16px">Hushclaw was first announced as TETHER: Primal.</p>"""),
+    "faq": hush_faq,
     "schema": [{
         "@type": "VideoGame",
-        "@id": f"{SITE}/tether-primal/#game",
-        "name": "TETHER: Primal",
-        "description": "Co-op dinosaur survival game for teams of one to four on a procedurally generated island, "
-                       "with a threat director and proximity voice that dinosaurs can hear.",
-        "genre": ["Survival", "Co-op", "Action"],
-        "gamePlatform": "PC",
-        "operatingSystem": "Windows",
+        "@id": f"{SITE}/hushclaw/#game",
+        "name": "Hushclaw",
+        "alternateName": "TETHER: Primal",
+        "url": f"{SITE}/hushclaw/",
+        "sameAs": [ITCH_HUSHCLAW],
+        "description": "First-person co-op dinosaur survival game for one to four players on a procedurally "
+                       "generated island, with stealth, proximity voice chat and extraction by helicopter.",
+        "genre": ["Survival", "Co-op", "Stealth", "Horror"],
+        "gamePlatform": ["Windows", "macOS"],
+        "operatingSystem": "Windows, macOS",
         "applicationCategory": "GameApplication",
+        "softwareVersion": "0.3.0",
         "playMode": ["CoOp", "MultiPlayer", "SinglePlayer"],
         "numberOfPlayers": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 4},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": ITCH_HUSHCLAW,
+                   "description": "Name your own price"},
         "author": {"@type": "Organization", "name": "Vantward Games", "parentOrganization": ORG_REF},
         "publisher": ORG_REF,
-        "image": f"{SITE}/assets/og/tether-primal.jpg",
+        "image": f"{SITE}/assets/og/hushclaw.jpg",
     }],
 })
 
@@ -566,7 +590,7 @@ PAGES.append({
     "crumb": "About",
     "title": "About Vantward Solutions | Software Studio in Singapore",
     "desc": "Vantward Solutions Pte. Ltd. is a Singapore software studio founded by Firdous Mahmood. We make EraseAI "
-            "Firewall, Rubikation, CookHub and, under Vantward Games, TETHER: Primal.",
+            "Firewall, Rubikation, CookHub and, under Vantward Games, Hushclaw.",
     "acc": "#02c8df",
     "og": "home.jpg",
     "alt": "Vee the robot in a room at dawn, the opening scene of vantward.com",
@@ -577,10 +601,10 @@ PAGES.append({
             "with friends.",
     "ctas": ['<a class="btn primary" href="#contact">Contact us</a>', '<a class="btn" href="/">Watch Vee\'s day</a>'],
     "body": section("What we make", tiles([
-        ('<a href="/eraseai-firewall/">EraseAI Firewall</a>', "A free Chrome extension that stops secrets and personal data reaching ChatGPT, Claude, Gemini and Replit."),
+        ('<a href="/eraseai-firewall/">EraseAI Firewall</a>', "A free Chrome extension and Android app that stops secrets and personal data reaching ChatGPT, Claude, Gemini and Replit."),
         ('<a href="/rubikation/">Rubikation</a>', "A live 1v1 cube arena with world and country ranks, on the web and Android."),
         ('<a href="/cookhub/">CookHub</a>', "A zero-commission marketplace for home cooking in your neighbourhood."),
-        ('<a href="/tether-primal/">TETHER: Primal</a>', "A co-op dinosaur survival game from Vantward Games, coming soon to PC."),
+        ('<a href="/hushclaw/">Hushclaw</a>', "A co-op dinosaur survival game from Vantward Games, in alpha for Windows and macOS."),
     ])) + section("Company", """      <div class="grid">
         <div class="tile"><h3>Legal name</h3><p>Vantward Solutions Pte. Ltd.<br>Registration No. 202606980C</p></div>
         <div class="tile"><h3>Based in</h3><p>68 Circular Road #02-01, Singapore 049422</p></div>
@@ -606,6 +630,24 @@ def main():
         out.parent.mkdir(exist_ok=True)
         out.write_text(page(p))
         print("wrote", out.relative_to(ROOT))
+
+    # The game was renamed; keep the old address working and point search engines at the new one.
+    (ROOT / "tether-primal").mkdir(exist_ok=True)
+    (ROOT / "tether-primal" / "index.html").write_text(f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hushclaw (formerly TETHER: Primal) | Vantward</title>
+  <link rel="canonical" href="{SITE}/hushclaw/">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0; url=/hushclaw/">
+</head>
+<body>
+  <p>TETHER: Primal is now called Hushclaw. <a href="/hushclaw/">Go to Hushclaw</a>.</p>
+</body>
+</html>
+""")
+    print("wrote tether-primal/index.html (redirect)")
 
     urls = [("/", "1.0")] + [(p["path"], "0.8") for p in PAGES]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
