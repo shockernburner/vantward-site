@@ -170,7 +170,7 @@ def page(p):
           <p class="lead">{p["lead"]}</p>
           <div class="btns">
 {ctas}
-          </div>
+          </div>{p.get("badge", "")}
         </div>
         <figure><img src="/assets/og/{p["og"]}" alt="{html.escape(p["alt"])}" width="1200" height="630" fetchpriority="high"></figure>
       </div>
@@ -310,6 +310,9 @@ PAGES.append({
         <div class="price"><h3>EraseAI Personal</h3><div class="amt">$5<small style="font-size:.9rem;color:#b6bddc"> / month</small></div><ul><li>Or $54 a year</li><li>One-click Sanitize &amp; Send</li><li>Attachment and screenshot scanning</li><li>Scan history in your dashboard</li></ul></div>
       </div>
       <p style="margin-top:18px">Security and IT teams use EraseAI Firewall to reduce data leaks to AI tools without banning them. Team plans are at <a href="https://eraseai.ai">eraseai.ai</a>.</p>"""),
+    "badge": '\n          <p style="margin-top:18px">'
+             + '<a class="ph-badge" href="https://www.producthunt.com/products/eraseai-firewall?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-eraseai-firewall" target="_blank" rel="noopener noreferrer"><img alt="EraseAI Firewall - Stop secrets and PII before you hit Send in Public LLMs | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1290119&amp;theme=light&amp;t=1793694411409"></a>'
+             + "</p>",
     "faq": eraseai_faq,
     "schema": [{
         "@type": "SoftwareApplication",
